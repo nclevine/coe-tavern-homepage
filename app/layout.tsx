@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
-  title: "Coe Tavern",
-  description: "Coe Tavern in Jackson Hole, Wyoming",
+  title: 'Coe Tavern',
+  description: 'Coe Tavern in Jackson Hole, Wyoming',
 };
 
 export default function RootLayout({
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={''}>{children}</body>
+      <body>
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

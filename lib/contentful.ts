@@ -8,7 +8,6 @@ const client = createClient({
 export async function getFoodMenuItems(): Promise<Entry<any>[]> {
   const foodEntries: EntryCollection<any> = await client.getEntries({
     content_type: 'foodMenuItem',
-    order: ['fields.category', 'fields.order'],
   });
 
   return foodEntries.items;
@@ -17,7 +16,6 @@ export async function getFoodMenuItems(): Promise<Entry<any>[]> {
 export async function getDrinkMenuItems(): Promise<Entry<any>[]> {
   const drinkEntries: EntryCollection<any> = await client.getEntries({
     content_type: 'drinkMenuItem',
-    order: ['fields.category', 'fields.order'],
   });
 
   return drinkEntries.items;
