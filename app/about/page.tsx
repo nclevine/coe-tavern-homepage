@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Coe Tavern | About',
+  description: 'Coe Tavern in Jackson Hole, Wyoming',
+};
+
 export default function AboutPage() {
     return (
       <div>

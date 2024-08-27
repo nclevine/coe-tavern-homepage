@@ -1,4 +1,7 @@
+"use client"
+
 import Link from 'next/link';
+import CabinLogo from '../SVG/cabinLogo.svg'
 
 export default function Navigation() {
   return (
@@ -6,8 +9,7 @@ export default function Navigation() {
       <ul>
         <li>
           <Link href="/">
-            LOGO TK
-            {/* <img src="/path/to/logo.png" alt="Coe Tavern Logo" /> */}
+            <CabinLogo />
           </Link>
         </li>
         <li>

@@ -1,4 +1,11 @@
 import { getFoodMenuItems, getDrinkMenuItems } from '../../lib/contentful';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Coe Tavern | Menu',
+  description: 'Coe Tavern in Jackson Hole, Wyoming',
+};
+
 
 export default async function MenuPage() {
   const foodItems = await getFoodMenuItems();
