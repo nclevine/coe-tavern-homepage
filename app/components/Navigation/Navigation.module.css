@@ -1,0 +1,181 @@
+/* General Navbar Styles */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--coe-green);
+  color: var(--coe-gold);
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: var(--nav-height-mobile);
+}
+
+/* Logo Wrapper */
+.logoWrapper {
+  overflow: hidden;
+  height: var(--nav-height-mobile);
+  flex-grow: 1;
+  flex-basis: 245px;
+}
+
+.logoLinkWrapper {
+  display: block;
+  height: 100%;
+}
+
+.mobileLogoWrapper, .desktopLogoWrapper {
+  height: 100%;
+}
+
+.mobileLogoWrapper {
+  display: block;
+}
+
+.desktopLogoWrapper {
+  display: none;
+}
+
+.mobileLogo *, .desktopLogo * {
+  fill: var(--coe-gold);
+}
+
+.mobileLogo, .desktopLogo {
+  width: auto;
+  position: relative;
+  top: 50%;
+}
+
+.mobileLogo {
+  height: 85%;
+  transform: translateY(-52%);
+}
+
+.desktopLogo {
+  height: 130%;
+  transform: translateY(-50%);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--coe-gold);
+  transition: all 0.3s ease;
+}
+
+.lineTop {
+  width: 30px;
+  transform: rotate(45deg) translateY(12px);
+}
+
+.lineBottom {
+  width: 30px;
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+/* Navigation Links */
+.navLinksContainer {
+  position: fixed;
+  top: var(--nav-height-mobile);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--nav-height-mobile));
+  background-color: var(--coe-green);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+}
+
+.navLinks {
+  font-family: var(--font-raleway);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.menuOpen {
+  max-height: 100%;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menuOpen .navLinks {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navLinks li {
+  margin-bottom: 20px;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .navbar {
+    height: var(--nav-height-desktop);
+  }
+
+  .navContent {
+    height: var(--nav-height-desktop);
+  }
+
+  .logoWrapper {
+    height: var(--nav-height-desktop);
+  }
+
+  .mobileLogoWrapper {
+    display: none;
+  }
+
+  .desktopLogoWrapper {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navLinksContainer {
+    position: static;
+    height: auto;
+    max-height: none;
+    background-color: transparent;
+    overflow: visible;
+  }
+
+  .navLinks {
+    flex-direction: row;
+    opacity: 1;
+    visibility: visible;
+    font-size: 20px;
+  }
+
+  .navLinks li {
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

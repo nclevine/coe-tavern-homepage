@@ -2,15 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
 
 :root {
+  /* BREAKPOINTS */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1025px;
+
   /* COLORS */
   --coe-green: #3E4B44;
   --coe-gold: #DABF79;
   --off-black: #333;
-  --off-white: #eee;
+  --off-white: #f9f9f9;
 
   /* FONTS */
   --font-goudy: "Sorts Mill Goudy", serif;
   --font-raleway: "Raleway", sans-serif;
+
+  /* SIZES */
+  --nav-height-mobile: 80px;
+  --nav-height-desktop: 100px;
 }
 
 /* Additional global styles */
@@ -23,6 +32,16 @@ body {
   font-size: 16px;
   color: var(--off-black);
   background-color: var(--off-white);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+}
+
+main {
+  min-height: calc(100vh - var(--nav-height-mobile));
 }
 
 * {
