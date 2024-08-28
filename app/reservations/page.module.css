@@ -1,0 +1,6 @@
+.instructions {
+    font-family: var(--font-goudy);
+    font-style: italic;
+    text-align: center;
+    padding: 0 30px;
+}

@@ -1,3 +1,4 @@
+import styles from './page.module.css'
 import ResyWidget from '../components/ResyWidget/ResyWidget';
 import type { Metadata } from 'next';
 
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function ReservationsPage() {
   return (
-    <div>
-      <h1>Reservations</h1>
-      <p>Book a table at Coe Tavern through Resy:</p>
+    <div className={styles.reservations}>
+      <h1 className={styles.header}>Reservations</h1>
       <ResyWidget />
+      <h3 className={styles.instructions}>Tables available Tuesday through Saturday, 5pm - 9:15pm</h3>
     </div>
   );
 }

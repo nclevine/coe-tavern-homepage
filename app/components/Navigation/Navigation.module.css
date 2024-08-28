@@ -44,6 +44,8 @@
 
 .mobileLogo *, .desktopLogo * {
   fill: var(--coe-gold);
+  /* fill: #DABF79; */
+  /* fill: currentColor; */
 }
 
 .mobileLogo, .desktopLogo {

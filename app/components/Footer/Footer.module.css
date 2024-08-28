@@ -1,0 +1,27 @@
+.footer {
+    background-color: var(--coe-green);
+    color: var(--coe-gold);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-caslon);
+}
+
+.instagram {
+    height: 30px;
+
+    & a {
+        display: block;
+        height: 100%;
+    }
+}
+
+.instagramLogo {
+    height: 100%;
+    width: auto;
+
+    & * {
+        fill: var(--coe-gold);
+    }
+}

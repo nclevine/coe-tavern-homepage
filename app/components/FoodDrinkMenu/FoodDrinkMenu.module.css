@@ -1,4 +1,67 @@
-.menuToggle {
-    cursor: pointer;
+.menuToggles {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-raleway);
+    text-transform: uppercase;
 }
 
+.menuToggle {
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.toggleSelected {
+    text-decoration: underline;
+}
+
+.menuWrapper {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.menuPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuCategory {
+    width: 100%;
+    padding: 40px;
+}
+
+.menuCategorySubtitle {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.mobileDisplayNone {
+    display: none;
+}
+
+.mobileNoTopPadding {
+    padding-top: 0;
+    margin-top: -40px;
+}
+
+@media (min-width: 768px) {
+    .menuPanel {
+        flex-direction: row;
+    }
+
+    .menuCategory {
+        width: 50%;
+
+        &.alwaysFullWidth {
+            width: 100%;
+        }
+    }
+
+    .mobileDisplayNone {
+        display: block;
+    }
+
+    .mobileNoTopPadding {
+        padding-top: 40px;
+        margin-top: 0;
+    }
+}

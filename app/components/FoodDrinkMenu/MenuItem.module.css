@@ -1,0 +1,18 @@
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.menuItemTitle, .menuItemPrice {
+    font-family: var(--font-raleway);
+    text-transform: uppercase;
+}
+
+.menuItemDescription {
+    font-style: italic;
+}
+
+.menuItemPrice {
+    padding-left: 20px;
+}
