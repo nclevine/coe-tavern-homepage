@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Mapbox = () => {
   const mapboxToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
-  const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/pin-l+3E4B44(-110.762428,43.478141)/-110.762428,43.478141,14.25/500x500@2x?access_token=${mapboxToken}`;
+  const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/url-https%3A%2F%2Fcoe-tavern-homepage.vercel.app%2Fgreen-cabin.png(-110.762428,43.478141)/-110.762428,43.478141,14.25/500x500@2x?access_token=${mapboxToken}`
 
   return (
     <div>
