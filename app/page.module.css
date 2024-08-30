@@ -1,3 +1,45 @@
-.main {
+.homeHeader {
+    white-space: pre;
+    color: var(--eggshell);
+    text-align: left;
+    position: absolute;
+    z-index: 100;
+    text-transform: uppercase;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150%;
+}
 
+.homeBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.homeBackgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homeBackgroundOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--coe-green);
+    opacity: 50%;
+}
+
+@media (min-width: 768px) {
+    .homeHeader {
+        font-size: 300%;
+    }
 }
