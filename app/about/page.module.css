@@ -1,6 +1,5 @@
 .about {
     & h3 {
-        /* text-transform: uppercase; */
         margin: 20px 0;
         text-align: center;
         font-family: var(--font-goudy);
@@ -12,6 +11,7 @@
 
 .header {
     margin: 50px auto;
+    padding: 0 30px;
 
     & span {
         background-color: var(--off-white);
@@ -22,6 +22,9 @@
         font-family: var(--font-raleway);
         font-weight: 700;
         letter-spacing: 4px;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
     }
 }
 
@@ -62,17 +65,6 @@
     }
 }
 
-/* .topImageWrapper {
-    position: relative;
-    width: 125%;
-    right: 30%;
-} */
-
-/* .map {
-    position: relative;
-    height: 300px;
-} */
-
 .locationHoursText {
     & p {
         font-family: var(--font-raleway);
@@ -105,5 +97,11 @@
         & p {
             padding: 0px;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        font-size: 145%;
     }
 }

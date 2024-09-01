@@ -1,28 +1,22 @@
-/* General Navbar Styles */
 .navbar {
   width: 100%;
   position: relative;
   top: 0;
   left: 0;
   z-index: 1000;
-  /* background-color: var(--coe-green); */
-  /* color: var(--coe-gold); */
+  overflow: hidden;
 }
 
 .navContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0 20px; */
   padding: 100px 50px 100px 30px;
-  /* height: var(--nav-height-mobile); */
   height: 0;
 }
 
-/* Logo Wrapper */
 .logoWrapper {
   overflow: hidden;
-  /* height: var(--nav-height-mobile); */
   height: 130px;
   flex-grow: 1;
   flex-basis: 245px;
@@ -44,11 +38,9 @@
 
 .mobileLogoWrapper {
   display: block;
-  /* display: none; */
 }
 
 .desktopLogoWrapper {
-  /* display: none; */
   display: block;
 
   &:hover {
@@ -61,9 +53,6 @@
 .desktopLogo * {
   fill: var(--coe-green) !important;
   transition: fill 0.2s ease;
-
-  /* fill: #DABF79; */
-  /* fill: currentColor; */
 }
 
 .mobileLogo * {
@@ -77,8 +66,6 @@
 }
 
 .mobileLogo {
-  /* height: 85%;
-  transform: translateY(-52%); */
   height: 150%;
   transform: translateY(-75%);
 }
@@ -88,7 +75,6 @@
   transform: translateY(-50%);
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -128,27 +114,21 @@
   background-color: var(--coe-gold);
 }
 
-/* Navigation Links */
 .navLinksContainer {
   position: fixed;
-  /* top: var(--nav-height-mobile); */
   top: 0;
   left: 0;
   width: 100vw;
-  /* height: calc(100vh - var(--nav-height-mobile)); */
   height: 100vh;
   background-color: var(--coe-green);
-  /* overflow: hidden; */
-  /* transition: max-height 0.3s ease; */
+  overflow: hidden;
   transition: visibility 0.3s ease, opacity 0.3s ease;
-  /* max-height: 0; */
   visibility: hidden;
   opacity: 0;
   z-index: 99;
 }
 
 .menuOpen {
-  /* max-height: 100%; */
   visibility: visible;
   opacity: 1;
 }
@@ -164,15 +144,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* transition: opacity 0.3s ease, visibility 0.3s ease; */
 }
-
-/* .menuOpen .navLinks {
-  opacity: 1;
-  visibility: visible;
-} */
 
 .navLink {
   margin-bottom: 20px;
@@ -204,51 +176,12 @@
   }
 }
 
-/* Desktop Styles */
-/* @media (min-width: 768px) {
-  .navbar {
-    height: var(--nav-height-desktop);
-  }
-
-  .navContent {
-    height: var(--nav-height-desktop);
+@media (max-width: 400px) {
+  .navLinks {
+    font-size: 150%;
   }
 
   .logoWrapper {
-    height: var(--nav-height-desktop);
+    height: 100px;
   }
-
-  .mobileLogoWrapper {
-    display: none;
-  }
-
-  .desktopLogoWrapper {
-    display: block;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .navLinksContainer {
-    position: static;
-    height: auto;
-    max-height: none;
-    background-color: transparent;
-    overflow: visible;
-  }
-
-  .navLinks {
-    flex-direction: row;
-    opacity: 1;
-    visibility: visible;
-    font-size: 20px;
-    justify-content: end;
-  }
-
-  .navLinks li {
-    margin-bottom: 0;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-} */
+}

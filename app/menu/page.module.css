@@ -1,5 +1,6 @@
 .header {
     margin: 50px auto;
+    padding: 0 30px;
 
     & span {
         background-color: var(--off-white);
@@ -10,6 +11,9 @@
         font-family: var(--font-raleway);
         font-weight: 700;
         letter-spacing: 4px;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
     }
 }
 
@@ -17,4 +21,10 @@
     margin: 0 auto;
     max-width: 700px;
     padding: 30px;
+}
+
+@media (max-width: 400px) {
+    .header {
+        font-size: 145%;
+    }
 }
