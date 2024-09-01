@@ -52,6 +52,7 @@
         font-family: var(--font-raleway);
         font-weight: 700;
         text-align: left;
+        transform: skewX(-5deg);
         /* text-shadow: 1px 2px var(--coe-gold); */
     }
 }
@@ -100,6 +101,7 @@
             position: static;
             width: 100%;
             font-size: 150%;
+            transform: none;
         }
     }
 
