@@ -47,6 +47,7 @@ main {
   min-height: calc(100vh - var(--nav-height-mobile));
   /* padding-top: var(--nav-height-mobile); */
   position: relative;
+  overflow-x: hidden;
 }
 
 * {

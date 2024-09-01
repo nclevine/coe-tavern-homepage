@@ -12,7 +12,9 @@ export default function ReservationsPage() {
   return (
     <div className={styles.reservations}>
       <h1 className={styles.header}><span>Reservations</span></h1>
-      <ResyWidget />
+      <div className={styles.resyWidgetWrapper}>
+        <ResyWidget />
+      </div>
       <h3 className={styles.instructions}>Tables available Tuesday to Saturday, 5pm - 9pm</h3>
       {/* <div className={styles.reservationsBackground}>
         <Image

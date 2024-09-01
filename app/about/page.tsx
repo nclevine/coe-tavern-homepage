@@ -19,10 +19,21 @@ export default function AboutPage() {
             <h3>Hours</h3>
             <p>Tuesday to Saturday, 5pm - 9pm</p>
           </div>
-          <div className={styles.map}>
-            <Mapbox />
+          {/* <div className={styles.photoMapWrapper}> */}
+            <div className={styles.topImageWrapper}>
+              <Image
+                className={styles.topImage}
+                src='/coe-tavern-interior-chandelier.jpg'
+                alt='Coe Tavern'
+                width={1000}
+                height={1000}
+              />
+            </div>
+            {/* <div className={styles.map}>
+              <Mapbox />
+            </div> */}
           </div>
-        </div>
+        {/* </div> */}
         <div className={styles.history}>
           <div className={styles.historyImage}>
             <Image

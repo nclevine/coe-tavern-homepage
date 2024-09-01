@@ -1,7 +1,12 @@
 .about {
     & h3 {
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         margin: 20px 0;
+        text-align: center;
+        font-family: var(--font-goudy);
+        font-style: italic;
+        font-weight: 700;
+        font-size: 175%;
     }
 }
 
@@ -28,17 +33,77 @@
     margin: 0 auto;
 }
 
-.locationHoursText, .map, .historyText, .historyImage {
-    width: 50%;
+.locationHours {
+    flex-direction: column-reverse;
+
+    & p {
+        text-align: center;
+    }
+}
+
+.history {
+    flex-direction: column;
+}
+
+.locationHoursText, .topImageWrapper, .historyText, .historyImage {
+    width: 100%;
     padding: 30px;
 }
 
-.map {
-    height: 300px;
+.topImageWrapper, .historyImage {
+    & img {
+        width: 100%;
+    }
 }
+
+.historyText {
+    & p {
+        padding: 40px;
+    }
+}
+
+/* .topImageWrapper {
+    position: relative;
+    width: 125%;
+    right: 30%;
+} */
+
+/* .map {
+    position: relative;
+    height: 300px;
+} */
 
 .locationHoursText {
     & p {
         font-family: var(--font-raleway);
+    }
+}
+
+@media (min-width: 768px) {
+    .about {
+        & h3 {
+            text-align: left;
+        }
+    }
+
+    .locationHours, .history {
+        flex-direction: row;
+    }
+
+    .locationHoursText, .topImageWrapper, .historyText, .historyImage {
+        width: 50%;
+        padding: 30px;
+    }
+
+    .locationHours {
+        & p {
+            text-align: left;
+        }
+    }
+
+    .historyText {
+        & p {
+            padding: 0px;
+        }
     }
 }
