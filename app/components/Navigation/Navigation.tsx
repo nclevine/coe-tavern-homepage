@@ -40,18 +40,18 @@ export default function Navigation() {
 
         <div className={`${styles.navLinksContainer} ${isMenuOpen ? styles.menuOpen : ''}`}>
           <ul className={styles.navLinks}>
-            <li onClick={closeMenu}>
-            <Link href="/" legacyBehavior>
-              <a className={styles.logoLinkWrapper}>
-                <div className={styles.mobileLogoWrapper}>
-                  <MobileLogo className={styles.mobileLogo} />
-                </div>
-              </a>
-            </Link>
+            <li className={styles.navLink} onClick={closeMenu}>
+              <Link href="/" legacyBehavior>
+                <a className={styles.logoLinkWrapper}>
+                  <div className={styles.mobileLogoWrapper}>
+                    <MobileLogo className={styles.mobileLogo} />
+                  </div>
+                </a>
+              </Link>
             </li>
-            <li onClick={closeMenu}><Link href="/menu">Menu</Link></li>
-            <li onClick={closeMenu}><Link href="/reservations">Reservations</Link></li>
-            <li onClick={closeMenu}><Link href="/about">About</Link></li>
+            <li className={styles.navLink} onClick={closeMenu}><Link href="/menu">Menu</Link></li>
+            <li className={styles.navLink} onClick={closeMenu}><Link href="/reservations">Reservations</Link></li>
+            <li className={styles.navLink} onClick={closeMenu}><Link href="/about">About</Link></li>
           </ul>
         </div>
       </div>

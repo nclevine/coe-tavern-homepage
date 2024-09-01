@@ -1,17 +1,25 @@
 .menuToggles {
     display: flex;
     justify-content: center;
-    font-family: var(--font-raleway);
-    text-transform: uppercase;
+    font-family: var(--font-goudy);
+    font-style: italic;
+    font-size: 150%;
+    letter-spacing: 1px;
 }
 
 .menuToggle {
     cursor: pointer;
     margin: 0 20px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        color: var(--coe-gold);
+    }
 }
 
 .toggleSelected {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid var(--coe-green);
 }
 
 .menuWrapper {
@@ -29,6 +37,18 @@
     padding: 40px;
 }
 
+.menuCategoryTitle {
+    background-color: var(--off-white);
+    color: var(--coe-green);
+    border: 3px solid var(--coe-gold);
+    padding: 15px;
+    text-transform: uppercase;
+    font-family: var(--font-raleway);
+    /* font-weight: 700; */
+    letter-spacing: 4px;
+    text-align: center;
+}
+
 .menuCategorySubtitle {
     font-style: italic;
     margin-top: 20px;
@@ -36,6 +56,8 @@
 
 .mobileDisplayNone {
     display: none;
+    background-color: transparent;
+    border: none;
 }
 
 .mobileNoTopPadding {

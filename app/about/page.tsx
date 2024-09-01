@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
       <div className={styles.about}>
-        <h1>About Coe Tavern</h1>
+        <h1 className={styles.header}><span>About Coe Tavern</span></h1>
         <div className={styles.locationHours}>
           <div className={styles.locationHoursText}>
             <h3>Location</h3>

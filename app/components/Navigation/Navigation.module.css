@@ -50,10 +50,18 @@
 .desktopLogoWrapper {
   /* display: none; */
   display: block;
+
+  &:hover {
+    & svg * {
+      fill: var(--coe-gold) !important;
+    }
+  }
 }
 
 .desktopLogo * {
   fill: var(--coe-green) !important;
+  transition: fill 0.2s ease;
+
   /* fill: #DABF79; */
   /* fill: currentColor; */
 }
@@ -89,6 +97,16 @@
   cursor: pointer;
   position: relative;
   z-index: 100;
+
+  &:hover {
+    & .line {
+      background-color: var(--coe-gold);
+    }
+
+    & .lineTop, & .lineBottom {
+      background-color: var(--eggshell);
+    }
+  }
 }
 
 .line {
@@ -156,8 +174,24 @@
   visibility: visible;
 } */
 
-.navLinks li {
+.navLink {
   margin-bottom: 20px;
+
+  & a {
+    transition: color 0.2s ease;
+  }
+
+  & svg * {
+    transition: fill 0.2s ease;
+  }
+
+  &:hover a {
+    color: var(--eggshell);
+  }
+
+  &:hover svg * {
+    fill: var(--eggshell) !important;
+  }
 }
 
 @media (min-width: 768px) {

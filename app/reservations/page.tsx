@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 export default function ReservationsPage() {
   return (
     <div className={styles.reservations}>
-      <div className={styles.reservationsContent}>
-        <h1 className={styles.header}>Reservations</h1>
-        <ResyWidget />
-        <h3 className={styles.instructions}>Tables available Tuesday to Saturday, 5pm - 9pm</h3>
-      </div>
+      <h1 className={styles.header}><span>Reservations</span></h1>
+      <ResyWidget />
+      <h3 className={styles.instructions}>Tables available Tuesday to Saturday, 5pm - 9pm</h3>
       {/* <div className={styles.reservationsBackground}>
         <Image
           className={styles.reservationsBackgroundImage}

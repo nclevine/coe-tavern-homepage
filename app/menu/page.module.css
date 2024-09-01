@@ -1,0 +1,20 @@
+.header {
+    margin: 50px auto;
+
+    & span {
+        background-color: var(--off-white);
+        color: var(--coe-green);
+        border: 3px solid var(--coe-gold);
+        padding: 20px;
+        text-transform: uppercase;
+        font-family: var(--font-raleway);
+        font-weight: 700;
+        letter-spacing: 4px;
+    }
+}
+
+.bottomImageWrapper {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 30px;
+}
