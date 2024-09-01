@@ -21,7 +21,8 @@
 
   /* SIZES */
   --nav-height-mobile: 80px;
-  --nav-height-desktop: 100px;
+  /* --nav-height-desktop: 100px; */
+  --nav-height-desktop: 200px;
 }
 
 /* Additional global styles */
@@ -32,8 +33,8 @@ body {
   line-height: 1.6;
   font-family: var(--font-goudy);
   font-size: 16px;
-  color: var(--off-black);
-  background-color: var(--off-white);
+  color: var(--coe-green);
+  background-color: var(--eggshell);
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -44,7 +45,7 @@ body {
 
 main {
   min-height: calc(100vh - var(--nav-height-mobile));
-  padding-top: var(--nav-height-mobile);
+  /* padding-top: var(--nav-height-mobile); */
   position: relative;
 }
 
@@ -97,7 +98,8 @@ input, button, textarea, select {
 
 @media (min-width: 768px) {
   main {
-    /* min-height: calc(100vh - var(--nav-height-desktop)); */
-    padding-top: var(--nav-height-desktop);
+    /* margin-top: calc(var(--nav-height-desktop) * -1); */
+    min-height: calc(100vh - var(--nav-height-desktop));
+    /* padding-top: var(--nav-height-desktop); */
   }
 }

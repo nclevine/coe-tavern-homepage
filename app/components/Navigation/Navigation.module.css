@@ -1,26 +1,29 @@
 /* General Navbar Styles */
 .navbar {
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: var(--coe-green);
-  color: var(--coe-gold);
+  /* background-color: var(--coe-green); */
+  /* color: var(--coe-gold); */
 }
 
 .navContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: var(--nav-height-mobile);
+  /* padding: 0 20px; */
+  padding: 100px 50px 100px 30px;
+  /* height: var(--nav-height-mobile); */
+  height: 0;
 }
 
 /* Logo Wrapper */
 .logoWrapper {
   overflow: hidden;
-  height: var(--nav-height-mobile);
+  /* height: var(--nav-height-mobile); */
+  height: 130px;
   flex-grow: 1;
   flex-basis: 245px;
 }
@@ -28,6 +31,11 @@
 .logoLinkWrapper {
   display: block;
   height: 100%;
+  width: max-content;
+
+  li & {
+    width: auto;
+  }
 }
 
 .mobileLogoWrapper, .desktopLogoWrapper {
@@ -36,16 +44,22 @@
 
 .mobileLogoWrapper {
   display: block;
+  /* display: none; */
 }
 
 .desktopLogoWrapper {
-  display: none;
+  /* display: none; */
+  display: block;
 }
 
-.mobileLogo *, .desktopLogo * {
-  fill: var(--coe-gold);
+.desktopLogo * {
+  fill: var(--coe-green) !important;
   /* fill: #DABF79; */
   /* fill: currentColor; */
+}
+
+.mobileLogo * {
+  fill: var(--coe-gold) !important;
 }
 
 .mobileLogo, .desktopLogo {
@@ -55,8 +69,10 @@
 }
 
 .mobileLogo {
-  height: 85%;
-  transform: translateY(-52%);
+  /* height: 85%;
+  transform: translateY(-52%); */
+  height: 150%;
+  transform: translateY(-75%);
 }
 
 .desktopLogo {
@@ -71,68 +87,91 @@
   justify-content: space-between;
   height: 20px;
   cursor: pointer;
+  position: relative;
+  z-index: 100;
 }
 
 .line {
   width: 25px;
   height: 3px;
-  background-color: var(--coe-gold);
+  background-color: var(--coe-green);
   transition: all 0.3s ease;
 }
 
 .lineTop {
   width: 30px;
   transform: rotate(45deg) translateY(12px);
+  background-color: var(--coe-gold);
 }
 
 .lineBottom {
   width: 30px;
   transform: rotate(-45deg) translateY(-12px);
+  background-color: var(--coe-gold);
 }
 
 /* Navigation Links */
 .navLinksContainer {
   position: fixed;
-  top: var(--nav-height-mobile);
+  /* top: var(--nav-height-mobile); */
+  top: 0;
   left: 0;
-  width: 100%;
-  height: calc(100vh - var(--nav-height-mobile));
+  width: 100vw;
+  /* height: calc(100vh - var(--nav-height-mobile)); */
+  height: 100vh;
   background-color: var(--coe-green);
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  max-height: 0;
+  /* overflow: hidden; */
+  /* transition: max-height 0.3s ease; */
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  /* max-height: 0; */
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
 }
 
 .menuOpen {
-  max-height: 100%;
+  /* max-height: 100%; */
+  visibility: visible;
+  opacity: 1;
 }
 
 .navLinks {
   font-family: var(--font-caslon);
+  color: var(--coe-gold);
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 225%;
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* transition: opacity 0.3s ease, visibility 0.3s ease; */
 }
 
-.menuOpen .navLinks {
+/* .menuOpen .navLinks {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 .navLinks li {
   margin-bottom: 20px;
 }
 
-/* Desktop Styles */
 @media (min-width: 768px) {
+  .navContent {
+    padding: 100px;
+  }
+
+  .logoWrapper {
+    height: 200px;
+  }
+}
+
+/* Desktop Styles */
+/* @media (min-width: 768px) {
   .navbar {
     height: var(--nav-height-desktop);
   }
@@ -178,4 +217,4 @@
     margin-left: 20px;
     margin-right: 20px;
   }
-}
+} */

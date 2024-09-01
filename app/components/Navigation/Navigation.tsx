@@ -23,9 +23,9 @@ export default function Navigation() {
         <div className={styles.logoWrapper}>
           <Link href="/" legacyBehavior>
             <a className={styles.logoLinkWrapper}>
-              <div className={styles.mobileLogoWrapper}>
+              {/* <div className={styles.mobileLogoWrapper}>
                 <MobileLogo className={styles.mobileLogo} />
-              </div>
+              </div> */}
               <div className={styles.desktopLogoWrapper}>
                 <DesktopLogo className={styles.desktopLogo} />
               </div>
@@ -40,6 +40,15 @@ export default function Navigation() {
 
         <div className={`${styles.navLinksContainer} ${isMenuOpen ? styles.menuOpen : ''}`}>
           <ul className={styles.navLinks}>
+            <li onClick={closeMenu}>
+            <Link href="/" legacyBehavior>
+              <a className={styles.logoLinkWrapper}>
+                <div className={styles.mobileLogoWrapper}>
+                  <MobileLogo className={styles.mobileLogo} />
+                </div>
+              </a>
+            </Link>
+            </li>
             <li onClick={closeMenu}><Link href="/menu">Menu</Link></li>
             <li onClick={closeMenu}><Link href="/reservations">Reservations</Link></li>
             <li onClick={closeMenu}><Link href="/about">About</Link></li>

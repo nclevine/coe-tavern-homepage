@@ -1,8 +1,8 @@
 .footer {
-    background-color: var(--coe-green);
-    color: var(--coe-gold);
+    /* background-color: var(--coe-green); */
+    /* color: var(--coe-gold); */
     display: flex;
-    padding: 15px;
+    padding: 100px 50px;
     align-items: center;
     justify-content: space-between;
     font-family: var(--font-caslon);
@@ -22,6 +22,12 @@
     width: auto;
 
     & * {
-        fill: var(--coe-gold);
+        fill: var(--coe-green);
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 100px;
     }
 }

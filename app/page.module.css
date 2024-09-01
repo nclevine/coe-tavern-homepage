@@ -1,4 +1,123 @@
-.homeHeader {
+.topImageWrapper, .bottomImageWrapper, .homeText {
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 850px;
+}
+
+.bottomImageWrapper {
+    margin-top: -85px;
+}
+
+.homeText {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    & div {
+        width: 50%;
+        padding: 30px;
+        position: relative;
+    }
+}
+
+.mainDescription {
+    background-color: var(--coe-green);
+    /* color: var(--eggshell); */
+    /* font-size: 175%; */
+    left: 40px;
+    top: -85px;
+    transform: skewX(5deg);
+    z-index: 2;
+    
+    & h1 {
+        color: var(--coe-green);
+        mix-blend-mode: plus-lighter;
+        position: relative;
+        top: 0px;
+        left: 30px;
+        font-size: 220%;
+        width: 175%;
+        text-transform: uppercase;
+        font-family: var(--font-raleway);
+        font-weight: 700;
+        text-align: left;
+        /* text-shadow: 1px 2px var(--coe-gold); */
+    }
+}
+
+.hoursReservations {
+    position: relative;
+    z-index: 2;
+
+    & button {
+        position: relative;
+        top: 125px;
+        right: 100px;
+        background-color: var(--eggshell);
+        border: 5px solid var(--coe-gold);
+        padding: 20px 30px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--coe-gold);
+        }
+
+        & h1 {
+            color: var(--coe-green);
+            text-wrap: nowrap;
+            /* font-family: var(--font-goudy); */
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .homeText {
+        flex-direction: column;
+
+        & div {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    .mainDescription {
+        transform: none;
+
+        & h1 {
+            position: static;
+            width: 100%;
+            font-size: 150%;
+        }
+    }
+
+    .hoursReservations {
+        padding-bottom: 0 !important;
+        position: relative !important;
+        top: -50px;
+
+        & a {
+            display: block;
+            text-align: center;
+        }
+
+        & button {
+            position: static;
+
+            & h1 {
+                text-wrap: wrap;
+                font-size: 100%;
+            }
+        }
+    }
+
+    .bottomImageWrapper {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+/* .homeHeader {
     white-space: pre;
     color: var(--eggshell);
     text-align: left;
@@ -42,4 +161,4 @@
     .homeHeader {
         font-size: 300%;
     }
-}
+} */

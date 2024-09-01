@@ -10,7 +10,39 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className={styles.home}>
-      <h1 className={styles.homeHeader}>Modern classics,<br/>&nbsp;&nbsp;&nbsp;history,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;& casual elegance</h1>
+      <div className={styles.topImageWrapper}>
+        <Image
+          className={styles.topImage}
+          src='/coe-tavern-exterior.jpg'
+          alt='Coe Tavern'
+          width={1000}
+          height={1000}
+        />
+      </div>
+      <div className={styles.homeText}>
+        <div className={styles.mainDescription}>
+          <h1>Modern classics, history, & casual elegance in the heart of Jackson, Wyoming</h1>
+        </div>
+        <div className={styles.hoursReservations}>
+          {/* <p>We are open Tues-Sat, 5-9pm</p> */}
+          <a href="https://resy.com/cities/jackson-wy-united-states/venues/coe-tavern" target="_blank">
+            <button>
+              <h1>Reserve a table</h1>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div className={styles.bottomImageWrapper}>
+        <Image
+          className={styles.bottomImage}
+          src='/coe-tavern-interior-wall.jpg'
+          alt='Coe Tavern'
+          width={1000}
+          height={1000}
+        />
+      </div>
+      
+      {/* <h1 className={styles.homeHeader}>Modern classics,<br/>&nbsp;&nbsp;&nbsp;history,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;& casual elegance</h1>
       <div className={styles.homeBackground}>
         <Image
           className={styles.homeBackgroundImage}
@@ -20,7 +52,7 @@ export default function Home() {
           height={1000}
         />
         <div className={styles.homeBackgroundOverlay}></div>
-      </div>
+      </div> */}
     </div>
   );
 }
