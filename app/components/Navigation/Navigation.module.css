@@ -32,12 +32,8 @@
   }
 }
 
-.mobileLogoWrapper, .desktopLogoWrapper {
+.desktopLogoWrapper {
   height: 100%;
-}
-
-.mobileLogoWrapper {
-  display: block;
 }
 
 .desktopLogoWrapper {
@@ -50,29 +46,17 @@
   }
 }
 
-.desktopLogo * {
-  fill: var(--coe-green) !important;
-  transition: fill 0.2s ease;
-}
-
-.mobileLogo * {
-  fill: var(--coe-gold) !important;
-}
-
-.mobileLogo, .desktopLogo {
-  width: auto;
-  position: relative;
-  top: 50%;
-}
-
-.mobileLogo {
-  height: 150%;
-  transform: translateY(-75%);
-}
-
 .desktopLogo {
   height: 130%;
   transform: translateY(-50%);
+  width: auto;
+  position: relative;
+  top: 50%;
+  
+  & * {
+    fill: var(--coe-green) !important;
+    transition: fill 0.2s ease;
+  }
 }
 
 .hamburger {
@@ -152,16 +136,47 @@
   & a {
     transition: color 0.2s ease;
   }
-
-  & svg * {
-    transition: fill 0.2s ease;
-  }
-
+  
   &:hover a {
     color: var(--eggshell);
   }
+  
+}
 
-  &:hover svg * {
+.navLinkLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  cursor: pointer;
+
+  & a {
+    display: block;
+    height: 100%;
+  }
+}
+
+.mobileLogoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+}
+
+.mobileLogo {
+  height: 100%;
+  width: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-75%);
+  
+  & * {
+    fill: var(--coe-gold) !important;
+    transition: fill 0.2s ease;
+  }
+
+  &:hover * {
     fill: var(--eggshell) !important;
   }
 }

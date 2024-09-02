@@ -55,19 +55,17 @@ export default function Navigation() {
         <div className={`${styles.navLinksContainer} ${isMenuOpen ? styles.menuOpen : ''}`}>
           <ul className={styles.navLinks}>
             <motion.li
-              className={styles.navLink}
+              className={`${styles.navLink} ${styles.navLinkLogo}`}
               onClick={closeMenu}
               initial="hidden"
               animate={isMenuOpen ? "visible" : "hidden"}
               variants={navLinkVariants}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
-              <Link href="/" legacyBehavior>
-                <a className={styles.logoLinkWrapper}>
+              <Link href="/">
                   <div className={styles.mobileLogoWrapper}>
                     <MobileLogo className={styles.mobileLogo} />
                   </div>
-                </a>
               </Link>
             </motion.li>
             <motion.li
