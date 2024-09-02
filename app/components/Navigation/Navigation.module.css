@@ -34,16 +34,7 @@
 
 .desktopLogoWrapper {
   height: 100%;
-}
-
-.desktopLogoWrapper {
   display: block;
-
-  &:hover {
-    & svg * {
-      fill: var(--coe-gold) !important;
-    }
-  }
 }
 
 .desktopLogo {
@@ -56,6 +47,10 @@
   & * {
     fill: var(--coe-green) !important;
     transition: fill 0.2s ease;
+  }
+
+  &:hover * {
+    fill: var(--coe-gold) !important;
   }
 }
 
