@@ -73,3 +73,35 @@ export async function getDrinkMenuItems(): Promise<OrganizedMenuItems> {
 
   return organizedDrinkItems;
 }
+
+export async function getAboutPageContent(): Promise<Entry<any> | null> {
+  const aboutPageEntries: EntryCollection<any> = await client.getEntries({
+    content_type: 'aboutPageContent',
+  });
+
+  return aboutPageEntries.items.length > 0 ? aboutPageEntries.items[0] : null;
+}
+
+export async function getHomepageContent(): Promise<Entry<any> | null> {
+  const homepageEntries: EntryCollection<any> = await client.getEntries({
+    content_type: 'homepageContent',
+  });
+
+  return homepageEntries.items.length > 0 ? homepageEntries.items[0] : null;
+}
+
+export async function getBasicInfo(): Promise<Entry<any> | null> {
+  const basicInfoEntries: EntryCollection<any> = await client.getEntries({
+    content_type: 'basicInfo',
+  });
+
+  return basicInfoEntries.items.length > 0 ? basicInfoEntries.items[0] : null;
+}
+
+export async function getMenuImage(): Promise<Entry<any> | null> {
+  const menuImageEntries: EntryCollection<any> = await client.getEntries({
+    content_type: 'menuImage',
+  });
+
+  return menuImageEntries.items.length > 0 ? menuImageEntries.items[0] : null;
+}

@@ -21,11 +21,9 @@
 
   /* SIZES */
   --nav-height-mobile: 80px;
-  /* --nav-height-desktop: 100px; */
   --nav-height-desktop: 200px;
 }
 
-/* Additional global styles */
 html,
 body {
   padding: 0;
@@ -35,17 +33,11 @@ body {
   font-size: 16px;
   color: var(--coe-green);
   background-color: var(--eggshell);
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
   overflow: scroll;
 }
 
 main {
   min-height: calc(100vh - var(--nav-height-mobile));
-  /* padding-top: var(--nav-height-mobile); */
   position: relative;
   overflow-x: hidden;
 }
@@ -99,8 +91,6 @@ input, button, textarea, select {
 
 @media (min-width: 768px) {
   main {
-    /* margin-top: calc(var(--nav-height-desktop) * -1); */
     min-height: calc(100vh - var(--nav-height-desktop));
-    /* padding-top: var(--nav-height-desktop); */
   }
 }

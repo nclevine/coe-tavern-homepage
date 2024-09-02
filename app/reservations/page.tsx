@@ -1,5 +1,5 @@
-import styles from './page.module.css'
-import ResyWidget from '../components/ResyWidget/ResyWidget';
+import { getBasicInfo } from '../../lib/contentful';
+import ReservationsPageContent from './ReservationsPageContent';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,14 +7,10 @@ export const metadata: Metadata = {
   description: 'Coe Tavern in Jackson Hole, Wyoming',
 };
 
-export default function ReservationsPage() {
-  return (
-    <div className={styles.reservations}>
-      <h1 className={styles.header}><span>Reservations</span></h1>
-      <div className={styles.resyWidgetWrapper}>
-        <ResyWidget />
-      </div>
-      <h3 className={styles.instructions}>Tables available Tuesday to Saturday, 5pm - 9pm</h3>
-    </div>
-  );
+export default async function ReservationsPage() {
+  const basicInfo = await getBasicInfo();
+
+  const hours = basicInfo?.fields.hours as string;
+
+  return <ReservationsPageContent hours={hours} />;
 }
