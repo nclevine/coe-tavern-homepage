@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: 'Coe Tavern in Jackson Hole, Wyoming',
 };
 
+export const dynamic = 'force-dynamic';
+
 export default async function AboutPage() {
   const aboutPageContent = await getAboutPageContent();
   const basicInfo = await getBasicInfo();
