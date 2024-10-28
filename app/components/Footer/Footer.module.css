@@ -8,8 +8,13 @@
     font-family: var(--font-caslon);
 }
 
+.logos {
+    display: flex;
+}
+
 .instagram {
     height: 30px;
+    padding-right: 10px;
 
     & a {
         display: block;
